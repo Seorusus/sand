@@ -1,0 +1,6 @@
+name = Adyax test 
+description = Create a views data table for use, sort and filter value of fields of nodes
+core = 7.x
+package = other
+version = 7.x-1.x
+project = adyax_test

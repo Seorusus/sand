@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function adyax_test_menu() {
+    $item = array();
+
+    $item['adyax_test'] = array( 
+        'title' => 'Table nodes', 
+        'type' => MENU_NORMAL_ITEM,
+		'page callback' => 'mine_page_adyax_test',
+        'access callback' => TRUE
+    );
+	$item['admin/config/people/adyax_test'] = arrey(
+		'title' => 'Admin Table nodes',
+		'type' => MENU_NORMAL_ITEM,
+		'page callback' => 'admin_page_adyax_test',
+		'access callback' => TRUE
+	);
+	
+
+    return $item;
+}
+
+function main_page_adyax_test() {
+	return t('Table nodes');
+}
+
+function admin_page_adyax_test() {
+	return t('Admin Table nodes');
+}
